@@ -43,6 +43,34 @@
 	} 
 
 
+
+
+	
+ //add song to slideshow
+function add_song(song_id){
+	var url = "<?=site_url('slideshow_song/quick_add/').$this_slideshow['id'].'/';?>"+song_id;
+	var target_div = "#songtitle_"+song_id;
+	$(target_div).prepend("<div uk-spinner></div>").addClass("kn-fade-list");
+
+	var content;
+	$.get(url, function(data){ 
+    content= data;
+	$('#add_song_tab').before(content);
+	$(target_div).fadeOut(1000); 
+	$("#full_songlist_titles").modal("hide");  
+
+});
+
+//$('#full_songlist_titles').modal('hide'); //option to hide list after selected
+	var url2 = "<?=site_url('song/song_slides/');?>"+song_id;
+	$.get(url2, function(data){
+		content= data;
+		$('#dummy_tab').before(content);
+	});
+	
+}
+
+
     $('.full_screen').click(function(){
         if(localStorage.getItem("full_screen") == 1)
              localStorage.removeItem("full_screen");
