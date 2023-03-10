@@ -1,4 +1,16 @@
 <script>
+    //Video Controls
+    function video_control(player_action)
+    { 
+        localStorage.setItem("video_control",player_action); //sends a command to video player
+    }
+    
+    //Beacon
+    function beacon(beacon_command){ 
+        localStorage.setItem("beacon",beacon_command); //sends a command to video player
+        
+    }
+    
     //Get the number of slides
     function get_slides_num(myDiv,parentDiv)
     {

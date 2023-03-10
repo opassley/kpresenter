@@ -70,20 +70,6 @@
 					<button onclick="video_control('unmute')"  class="btn btn-rose btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="top" title="Unmute Video">
 					  <i class="material-icons">volume_up</i>
 					</button>
-					 
-					<script>
-					//Video Controls
-					function video_control(player_action){ 
-						localStorage.setItem("video_control",player_action); //sends a command to video player
-					 
-					}
-					//Beacon
-					function beacon(beacon_command){ 
-						localStorage.setItem("beacon",beacon_command); //sends a command to video player
-					 
-					}
-	
-					</script>
 				</span>
 			
 			
