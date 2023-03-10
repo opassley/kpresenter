@@ -40,7 +40,8 @@
 				if(SLIDE_TYPE=="video" && VIDEO_CONTROL != localStorage.getItem("video_control"))
 					video_control(localStorage.getItem("video_control"));
 				
-				if(SLIDE_BODY != localStorage.getItem("currentSlide"))//check to ensure the same content is not being re written
+				//check to ensure the same content is not being re written
+				if(SLIDE_BODY != localStorage.getItem("currentSlide"))
 					{
 					    if(localStorage.getItem("slide_type") == "new_video"){
     						localStorage.setItem("slide_type","video"); 
