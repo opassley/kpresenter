@@ -219,23 +219,7 @@
 					</div>
 					
 					<!-- ///////////////////////////////////// -->
-					<script>
-							function get_slides_num(myDiv,parentDiv)
-							{
-								let numb = document.getElementById(myDiv).childElementCount; 
-								numb = numb-1;
-								document.getElementById("total_slides").innerHTML = numb;
-								
-								var index = $("#"+parentDiv).index();
-								index = index + 1;
-									document.getElementById("current_slide_number").innerHTML = index;
-								
-								 
-							 
-
-
-							}
-						</script> 
+					 
 						
 						<?php foreach($sub_slides_titles as $s): ?>
 						<?php 
@@ -371,15 +355,6 @@
 	$this->load->view('presenter/presenter_index_modals2'); 
 ?>
 <!--// modals-->
-
-<script>
-	/* ------------- SCRIPTS --------- */
-
-
-/* 
-End of Confirm Delete ---------------------------------------------------------
-*/
-</script> 
 
 
 <!-- Remove song titles from quick search list -->

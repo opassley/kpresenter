@@ -1,4 +1,16 @@
 <script>
+    //Get the number of slides
+    function get_slides_num(myDiv,parentDiv)
+    {
+        let numb = document.getElementById(myDiv).childElementCount; 
+        numb = numb-1;
+        document.getElementById("total_slides").innerHTML = numb;
+        
+        var index = $("#"+parentDiv).index();
+        index = index + 1;
+            document.getElementById("current_slide_number").innerHTML = index;
+    }
+    
     //change slides
     function change_slide(slide_id,slide_type)
 	{ 
