@@ -1,3 +1,8 @@
+<!-- Presenter scripts -->
+<?php 
+	$this->load->view('presenter/assets/presenter_scripts'); 
+?>
+<!--// presenter_scripts-->
 
 <div id="main" class="container-fluid">
 	<div class="row primary-text" >
@@ -355,11 +360,6 @@ echo "li#songtitle_".$s['id'].",";
 		//script for auto complete function
 		var artiste_list = [<?php foreach($artistes as $a)echo '"'.$a['display_name'].'",';?>];//generates artistes array dynamically
 	</script>	
-<!-- Presenter scripts -->
-<?php 
-	$this->load->view('presenter/assets/presenter_scripts'); 
-?>
-<!--// presenter_scripts-->
 
 <!-- Presenter Styles -->
 <?php 
