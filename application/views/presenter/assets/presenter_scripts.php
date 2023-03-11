@@ -42,8 +42,6 @@
 		
 		if(slide_type == "video"){
 			$("#video_controls").show(100);
-			//$("#video_controls").removeClass("hide");  
-			//$("#video_controls").addClass("show");
 		}
 		else{
 			$("#video_controls").hide(100);
