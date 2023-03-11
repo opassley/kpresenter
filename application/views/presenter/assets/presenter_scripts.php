@@ -3,6 +3,7 @@
     function video_control(player_action)
     { 
         localStorage.setItem("video_control",player_action); //sends a command to video player
+
     }
     
     //Beacon
@@ -40,11 +41,13 @@
 		localStorage.setItem("slide_type",slide_type);
 		
 		if(slide_type == "video"){
-			$("#video_controls").removeClass("hide");  
-			$("#video_controls").addClass("show");
+			$("#video_controls").show(100);
+			//$("#video_controls").removeClass("hide");  
+			//$("#video_controls").addClass("show");
 		}
-		else
-			$("#video_controls").addClass("hide");
+		else{
+			$("#video_controls").hide(100);
+		}
 			
 		if(localStorage.getItem("slide_type") == "video")
 			localStorage.setItem("slide_type","new_video"); 
